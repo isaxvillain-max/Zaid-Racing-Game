@@ -1,0 +1,71 @@
+/* GENERAL STYLING */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #222;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* GAME CONTAINER */
+#game-container {
+    position: relative;
+}
+
+/* CANVAS */
+#gameCanvas {
+    background: url('assets/road-bg.png') no-repeat center;
+    background-size: cover;
+    border: 2px solid #fff;
+    display: block;
+}
+
+/* SCORE */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* GAME OVER */
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+#game-over.hidden {
+    display: none;
+}
+
+#game-over h2 {
+    margin: 0 0 20px 0;
+    font-size: 28px;
+}
+
+#restartBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #00c853;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restartBtn:hover {
+    background-color: #00e676;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaid Racing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <div id="score">Score: 0</div>
+        <div id="game-over" class="hidden">
+            <h2>Game Over</h2>
+            <button id="restartBtn">Restart</button>
+        </div>
+    </div>
+
+    <!-- AUDIO -->
+    <audio id="bgMusic" src="assets/sounds/background.mp3" loop></audio>
+    <audio id="crashSound" src="assets/sounds/crash.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
