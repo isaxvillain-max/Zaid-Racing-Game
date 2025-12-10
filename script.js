@@ -163,3 +163,23 @@ function animate() {
 
 // START GAME
 animate();
+
+let touchStartX = 0;
+
+document.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+});
+
+document.addEventListener('touchend', (e) => {
+    let touchEndX = e.changedTouches[0].clientX;
+    let deltaX = touchEndX - touchStartX;
+
+    // Swipe threshold
+    if (deltaX > 50) {
+        // Swipe right
+        if (player.x < lanes[lanes.length - 1]) player.x += laneWidth;
+    } else if (deltaX < -50) {
+        // Swipe left
+        if (player.x > lanes[0]) player.x -= laneWidth;
+    }
+});
